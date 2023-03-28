@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+postcodes = Postcode.create([
+    {postcode: "00100"},
+    {postcode: "00200"},
+    {postcode: "00300"},
+    {postcode: "00400"},
+    {postcode: "00500"},
+    {postcode: "00600"},
+
+])
