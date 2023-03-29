@@ -108,7 +108,7 @@ brew install redis
 mysql -u root
 ```
 
-2. Start redis server
+2. Start redis server. Sidekiq cronjob uses redis for scheduling the jobs.
 
 ```
 redis-server
@@ -132,7 +132,7 @@ rails db:migrate
 rails db:seed
 ```
 
-6. Start sidekiq worker job. It will fetch the companies details for all the postcodes and save in the database. This job will run every hour. See [config/sidekiq.yml](config/sidekiq.yml)
+6. Start sidekiq worker job. It will fetch the companies details for all the postcodes and save in the database. This job will run every hour. See [config/sidekiq.yml](config/sidekiq.yml). Sidekiq cronjob uses redis for scheduling the jobs.
 
 ```
 bundle exec sidekiq
