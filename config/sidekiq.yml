@@ -1,0 +1,7 @@
+# config/sidekiq.yml
+
+:scheduler:
+  :schedule:
+    hello_world:
+      cron: "0 */1 * * *" # Runs every hour
+      class: FetchCompaniesJob
