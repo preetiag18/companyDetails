@@ -3,9 +3,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  namespace :api do
-    namespace :v1 do
-      resources :companies, param: :postcode
-    end
-  end
+  get '/postal_codes/:postcode/companies', to: 'postal_codes/companies#show', as: 'postal_codes_companies'
 end
